@@ -7,3 +7,7 @@ container: ../Dockerfile
 image: ../Dockerfile
 	chmod +x *
 	./Makeimage.sh
+
+sql: ../setup.sql ../Dockerfile
+	chmod +x *
+	./Makesql.sh
