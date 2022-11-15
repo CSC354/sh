@@ -11,4 +11,4 @@ docker run \
 --net debate-net \
 --name $result \
 -d mcr.microsoft.com/mssql/server:2022-latest \
-# -p 1433:1433 \
+-p 1433:1433 \
