@@ -10,4 +10,5 @@ image: ../Dockerfile
 
 sql: ../setup.sql ../Dockerfile
 	chmod +x *
+	./Makeimage.sh
 	./Makesql.sh
