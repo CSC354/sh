@@ -8,7 +8,9 @@ image: ../Dockerfile
 	chmod +x *
 	./Makeimage.sh
 
-sql: ../setup.sql ../Dockerfile
+mssql: ../Dockerfile ../setup.sql
+	./Makeimage.sh # build image if not
 	chmod +x *
-	./Makeimage.sh
-	./Makesql.sh
+	docker network inspect debate-net >/dev/null 2>&1 || \
+    docker network create --driver bridge debate-net
+	./Makecontainer.sh
